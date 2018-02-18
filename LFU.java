@@ -53,7 +53,7 @@ public class LFU {
                 for (Tuple tuple : passedPages) {
                     // passedPages je sortiran po rastucem redoslijedu u odnosu na broj pogodaka
                     if (loadedPages.stream().anyMatch(p -> p.getPage() == tuple.getPage())) {
-                        // Trazi LFU stranicu u prostoru ucitanih stranica i mijenja je sa novom
+                        // Trazi LFU stranicu u prostoru ucitanih stranica i mijenja je sa novom stranicom
                         loadedPages.forEach(c -> {
                             if (c.getPage() == tuple.getPage())
                                 c.setPage(Integer.valueOf(page));
